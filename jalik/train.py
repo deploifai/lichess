@@ -1,5 +1,6 @@
 import mlflow
 import pandas as pd
+import os
 from sklearn.preprocessing import LabelEncoder
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
