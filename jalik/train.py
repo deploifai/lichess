@@ -30,7 +30,9 @@ preds = model.predict(X_test)
 accuracy = accuracy_score(preds, y_test)
 print(accuracy)
 
-dump(model, "artifacts/model")
+dirname = os.path.dirname(os.path.realpath(__file__))
+print(dirname)
+dump(model, os.path.join(dirname, "artifacts", "model"))
 
 with mlflow.start_run() as run:
     mlflow.log_metric("accuracy", accuracy)
