@@ -3,3 +3,4 @@ venv
 .deploifai
 .idea
 dataset
+artifacts
