@@ -1,0 +1,6 @@
+.venv
+.deploifai
+.ipynb_checkpoints
+dataset
+artifacts
+*.ipynb
