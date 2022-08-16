@@ -1,1 +1,1 @@
-python Richard/train.py
+python train.py
