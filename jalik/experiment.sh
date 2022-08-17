@@ -1,4 +1,4 @@
 #!/bin/bash
 
 ls jalik
-python jalik/train.py
+python train.py
