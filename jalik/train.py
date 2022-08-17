@@ -10,12 +10,9 @@ from joblib import dump
 mlflow.set_tracking_uri('https://community.mlflow.deploif.ai')
 mlflow.set_experiment("Deploifai/Lichess/LichessJalik")
 
+data = pd.read_csv('LichessDataset/games.csv')
 train = pd.read_csv('LichessDataset/train.csv')
 test = pd.read_csv('LichessDataset/test.csv')
-
-cols_to_drop = ['opening_eco']
-train = train.drop(columns=cols_to_drop)
-test = test.drop(columns=cols_to_drop)
 
 X_train, y_train = train.drop(columns='winner'), train['winner']
 X_test, y_test = test.drop(columns='winner'), test['winner']

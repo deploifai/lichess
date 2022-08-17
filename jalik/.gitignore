@@ -4,3 +4,4 @@ venv
 .idea
 dataset
 artifacts
+deployment
