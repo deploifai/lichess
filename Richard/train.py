@@ -43,7 +43,7 @@ print(best_accuracy)
 best_model = models[results.index(best_accuracy)]
 
 dirname = os.path.dirname(os.path.realpath(__file__))
-dump(best_model, os.path.join(dirname, "artifacts", "model"))
+dump(best_model, os.path.join(dirname, "deployment", "model"))
 
 with mlflow.start_run() as run:
     mlflow.log_metric("accuracy", best_accuracy)
