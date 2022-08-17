@@ -17,7 +17,7 @@ test = pd.read_csv('/data/LichessDataset/test.csv')
 train_winner = train['winner']
 test_winner = test['winner']
 
-drop_cols = ['winner', 'opening_eco']
+drop_cols = ['winner']
 train.drop(columns=drop_cols, inplace=True)
 test.drop(columns=drop_cols, inplace=True)
 
@@ -25,8 +25,8 @@ encoder = LabelEncoder()
 train_winner = encoder.fit_transform(train_winner)
 test_winner = encoder.fit_transform(test_winner)
 
-# train['opening_eco'] = encoder.fit_transform(train['opening_eco'])
-# test['opening_eco'] = encoder.fit_transform(test['opening_eco'])
+train['opening_eco'] = encoder.fit_transform(train['opening_eco'])
+test['opening_eco'] = encoder.fit_transform(test['opening_eco'])
 
 models = [BernoulliNB(), ComplementNB(), GaussianNB(), MultinomialNB(), KNeighborsClassifier()]
 results = []
