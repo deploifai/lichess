@@ -17,7 +17,7 @@ test = pd.read_csv('/data/LichessDataset/test.csv')
 train_winner = train['winner']
 test_winner = test['winner']
 
-drop_cols = ['Unnamed: 0', 'winner', 'opening_eco']
+drop_cols = ['winner', 'opening_eco']
 train.drop(columns=drop_cols, inplace=True)
 test.drop(columns=drop_cols, inplace=True)
 
